@@ -25,7 +25,6 @@ public class SRTF {
             System.out.print("Enter Burst Time of P" + (i + 1) + ": ");
             bt[i] = input.nextInt();
             rt[i] = bt[i];
-            System.out.println();
         }
 
         int currentTime = 0;
@@ -78,7 +77,7 @@ public class SRTF {
         avgtat = avgtat / n;
 
         // Print the average waiting time and average turn around time
-        System.out.println("Average Waiting Time is " + avgwt);
+        System.out.println("\nAverage Waiting Time is " + avgwt);
         System.out.println("Average Turn Around Time is " + avgtat);
 
         input.close();

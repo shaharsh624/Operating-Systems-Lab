@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class FCFS {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -22,7 +21,6 @@ public class FCFS {
             at[i] = input.nextInt();
             System.out.print("Enter Burt Time of P" + (i + 1) + ": ");
             bt[i] = input.nextInt();
-            System.out.println();
         }
 
         int currentTime = 0;
@@ -58,7 +56,10 @@ public class FCFS {
         // Calculate the average waiting time and average turn around time
         double avgwt = 0.0;
         double avgtat = 0.0;
+
+//        System.out.println("\nP \tAT\tBT\tET\tWT\tTT");
         for(int i = 0; i < n; i ++) {
+//            System.out.printf("P%d\t%d\t%d\t%d\t%d\t%d\n", i+1, at[i], bt[i], tat[i] + bt[i], tat[i], wt[i]);
             avgwt = avgwt + wt[i];
             avgtat = avgtat + tat[i];
         }
@@ -67,7 +68,7 @@ public class FCFS {
         avgtat = avgtat / n;
 
         // Print the average waiting time and average turn around time
-        System.out.println("Average Waiting Time is " + avgwt);
+        System.out.println("\nAverage Waiting Time is " + avgwt);
         System.out.println("Average Turn Around Time is " + avgtat);
 
         input.close();
