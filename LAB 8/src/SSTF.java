@@ -15,6 +15,7 @@ public class SSTF {
 
         System.out.print("Enter Head location: ");
         int head = input.nextInt();
+
         int seekTime = 0;
         boolean[] completed = new boolean[n];
 
