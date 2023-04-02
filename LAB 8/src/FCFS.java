@@ -17,15 +17,16 @@ public class FCFS {
             requests[i-1] = sc.nextInt();
         }
         System.out.println(Arrays.toString(requests));
-        
+
         System.out.print("Enter Head value: ");
         int head = sc.nextInt();
 
         int seekTime = 0;
 
+        // Main Programm
         for (int i=0 ; i<n ; i++) {
             if (head > requests[i]) {
-                seekTime = seekTime - (requests[i] - head);
+                seekTime = seekTime + (head - requests[i]);
             }
             else {
                 seekTime = seekTime + (requests[i] - head);

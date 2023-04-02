@@ -4,10 +4,12 @@ public class SSTF {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        // Input no. of requests
         System.out.print("Enter number of requests: ");
         int n = input.nextInt();
         int[] requests = new int[n];
 
+        // Input requests Value
         for(int i = 0; i < n; i ++) {
             System.out.print("Enter Request " + (i + 1) + ": ");
             requests[i] = input.nextInt();

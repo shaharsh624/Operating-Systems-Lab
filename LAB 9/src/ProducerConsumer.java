@@ -5,8 +5,8 @@ public class ProducerConsumer {
     static int mutex = 1;
     static int pos = -1;
     static int n = 3;
-    static int item;
-    static Stack<Integer> newBuffer = new Stack<Integer>();
+    static String item;
+    static Stack<String> newBuffer = new Stack<String>();
     
     public static int wait(int s) {
         while (s != 1) ;
@@ -22,7 +22,7 @@ public class ProducerConsumer {
         pos = signal(pos);
         if (pos < n) {
             System.out.print("Enter Item to Produce: ");
-            int item = sc.nextInt();
+            String item = sc.next();
             System.out.println("Produced item '" + item + "'");
             newBuffer.push(item);
         }
@@ -41,11 +41,11 @@ public class ProducerConsumer {
 
     public static void display () {
         if (newBuffer.size() == 0) {
-            System.out.println("Buffer is Empty, There's nothing to Display!");
+            System.out.print("Buffer -> EMPTY");
         }
         else {
             System.out.print("Buffer -> ");
-            for (int i : newBuffer) {
+            for (String i : newBuffer) {
                 System.out.print(i + " ");
             }
             System.out.println();
@@ -64,7 +64,7 @@ public class ProducerConsumer {
 
             switch (choice) {
                 case (1) -> {
-                    if (mutex == 1 && pos < n) {
+                    if (mutex == 1 && (pos+1) < n) {
                         producer();
                     } else {
                         System.out.println("Buffer is full, There's no space to Produce!");
