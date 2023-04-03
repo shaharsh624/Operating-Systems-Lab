@@ -24,7 +24,7 @@ public class SSTF {
         // Main Programm
         for (int i=0 ; i<n ; i++) {
             int[] difference = findSeekTime(requests, head, completed);
-            int index = findIndex(difference);
+            int index = findIndexofMin(difference);
             seekTime += difference[index];
             completed[index] = true;
             head = requests[index];
@@ -62,7 +62,7 @@ public class SSTF {
         return min;
     }
 
-    public static int findIndex (int[] array) {
+    public static int findIndexofMin (int[] array) {
         int i = 0;
         int index = -1;
         int min = findMin(array);

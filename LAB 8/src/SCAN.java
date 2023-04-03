@@ -24,7 +24,7 @@ public class SCAN {
         int diskSize = sc.nextInt();
 
         // Input Direction
-        System.out.print("\nEnter Direction\n1. Towards Lesser Requests\n2. Towards Greater Requests\n-> ");
+        System.out.print("\nEnter Initial Direction\n1. Towards Lesser Requests\n2. Towards Greater Requests\n-> ");
         int direction = sc.nextInt();
 
         int seekTime = 0;
