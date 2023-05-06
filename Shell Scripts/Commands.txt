@@ -1,0 +1,16 @@
+chmod +x filename.sh
+./filename.sh
+
+#!/bin/bash
+#!/bash/sh
+
+
+// echo with \ feature
+echo -e "\nhello"
+
+// Arrays
+echo "${array[@]}" -> print whole array
+echo "${!array[@]}" -> print indices
+echo "${#array[@]}" -> print length
+
+

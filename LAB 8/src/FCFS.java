@@ -27,8 +27,7 @@ public class FCFS {
         for (int i=0 ; i<n ; i++) {
             if (head > requests[i]) {
                 seekTime = seekTime + (head - requests[i]);
-            }
-            else {
+            } else {
                 seekTime = seekTime + (requests[i] - head);
             }
             head = requests[i];

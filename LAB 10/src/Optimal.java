@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Optimal {
@@ -17,9 +18,7 @@ public class Optimal {
             System.out.print("Enter value of entry " + (i + 1) + ": ");
             entries[i] = input.nextInt();
         }
-        for (int i = 0; i < page; i++) {
-            frame[i] = -1;
-        }
+        Arrays.fill(frame, -1);
         int miss = page;
         for (int i = 0; i < page; i++) {
             frame[i] = entries[i];

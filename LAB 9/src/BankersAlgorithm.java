@@ -7,24 +7,24 @@ public class BankersAlgorithm {
         int P = scanner.nextInt();
         int R = scanner.nextInt();
 
-        int processes[] = new int[P];
+        int[] processes = new int[P];
         for (int i = 0; i < P; i++) {
             processes[i] = i;
         }
 
-        int avail[] = new int[R];
+        int[] avail = new int[R];
         for (int i = 0; i < R; i++) {
             avail[i] = scanner.nextInt();
         }
 
-        int max[][] = new int[P][R];
+        int[][] max = new int[P][R];
         for (int i = 0; i < P; i++) {
             for (int j = 0; j < R; j++) {
                 max[i][j] = scanner.nextInt();
             }
         }
 
-        int allot[][] = new int[P][R];
+        int[][] allot = new int[P][R];
         for (int i = 0; i < P; i++) {
             for (int j = 0; j < R; j++) {
                 allot[i][j] = scanner.nextInt();
@@ -40,7 +40,7 @@ public class BankersAlgorithm {
         scanner.close();
     }
 
-    public static void calculateNeed(int need[][], int max[][], int allot[][]) {
+    public static void calculateNeed(int[][] need, int[][] max, int[][] allot) {
         int P = need.length;
         int R = need[0].length;
         for (int i = 0; i < P; i++) {
@@ -50,18 +50,16 @@ public class BankersAlgorithm {
         }
     }
 
-    public static boolean isSafe(int processes[], int avail[], int max[][], int allot[][]) {
+    public static boolean isSafe(int[] processes, int[] avail, int[][] max, int[][] allot) {
         int P = processes.length;
         int R = avail.length;
-        int need[][] = new int[P][R];
+        int[][] need = new int[P][R];
         calculateNeed(need, max, allot);
-        boolean finish[] = new boolean[P];
+        boolean[] finish = new boolean[P];
         boolean found;
-        int safeSeq[] = new int[P];
-        int work[] = new int[R];
-        for (int i = 0; i < R; i++) {
-            work[i] = avail[i];
-        }
+        int[] safeSeq = new int[P];
+        int[] work = new int[R];
+        System.arraycopy(avail, 0, work, 0, R);
         int count = 0;
         while (count < P) {
             found = false;

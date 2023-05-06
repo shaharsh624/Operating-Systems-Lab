@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class FIFO {
@@ -17,9 +18,7 @@ public class FIFO {
 			System.out.print("Enter value of entry " + (i + 1) + ": ");
 			entries[i] = input.nextInt();
 		}
-		for (int i = 0; i < page; i++) {
-			frame[i] = -1;
-		}
+		Arrays.fill(frame, -1);
 		int miss = 0;
 		int next = 0;
 		for (int i = 0; i < entry; i++) {

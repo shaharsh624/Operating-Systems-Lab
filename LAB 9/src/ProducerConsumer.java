@@ -68,6 +68,7 @@ public class ProducerConsumer {
                         producer();
                     } else {
                         System.out.println("Buffer is full, There's no space to Produce!");
+                        display();
                     }
                 }
                 case (2) -> {
@@ -75,6 +76,7 @@ public class ProducerConsumer {
                         consumer();
                     } else {
                         System.out.println("Buffer is empty, There's nothing to Consume!");
+                        display();
                     }
                 }
                 case (3) -> display();

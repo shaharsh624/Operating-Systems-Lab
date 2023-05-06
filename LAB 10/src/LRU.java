@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class LRU {
@@ -17,9 +18,7 @@ public class LRU {
             System.out.print("Enter value of entry " + (i + 1) + ": ");
             entries[i] = input.nextInt();
         }
-        for (int i = 0; i < page; i++) {
-            frame[i] = -1;
-        }
+        Arrays.fill(frame, -1);
         int miss = page;
         int[] used = new int[page];
         for (int i = 0; i < page; i++) {
