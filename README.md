@@ -1,5 +1,5 @@
 # Operating Systems Lab
-All the programs that were developed in the OS Lab
+All the programs that were developed in the OS Lab.
 
 1. **Linux Commands - I**
 2. **Linux Commands - II**
